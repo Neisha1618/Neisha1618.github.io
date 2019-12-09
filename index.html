@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Neisha's First Website</title>
+     <style>
+            body {
+                background: rgb(50, 50, 200);
+                color: rgb(100, 60, 60);
+                padding: 10px;
+                font-family: arial;
+            }
+            header {
+                font-size: 1.5em;
+                font-weight: bold;
+            }
+            #all-contents {
+                max-width: 800px;
+                margin: auto;
+            }
+
+            /* navigation menu 
+            I added the border and border radius to have a red color scd neisha1618cheme*/
+            nav {
+                background: rgb(50, 100, 100);
+                margin-bottom: 20px;
+                display: flex;
+                padding: 10px;
+                border: groove 1em orange;
+                border-radius:10px 40px;
+            }
+            nav header {
+                display: flex;
+                align-items: center;
+                color: rgb(50, 55, 155);
+                flex: 1;
+            }
+            nav ul {
+                list-style-image: none;
+            }
+            nav li {
+                display: inline-block;
+                padding: 0 10px;
+            }
+            nav a {
+                text-decoration: none;
+                color: #fff;
+            }
+
+            /* main container area beneath menu */
+            main {
+                background: rgb(45, 138, 21);
+                display: flex;
+            }
+            .sidebar {
+                margin-right: 25px;
+                padding: 10px;
+            }
+            .sidebar img {
+                width: 200px;
+            }
+            .content {
+                flex: 1;
+                padding: 15px;
+            }
+            .interests header {
+                font-size: 1.25em;
+            }
+        </style>
+</head>
+<body>
+<div id="all-contents"> 
+            <nav>
+            <header>Neisha's First Website</header>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+               
+            </ul>
+            </nav>
+
+            <main>
+           <div class="sidebar">
+               <img src="https://scontent-dfw5-2.xx.fbcdn.net/v/t1.0-9/15220063_10154666750700539_7966909839674480857_n.jpg?_nc_cat=103&_nc_oc=AQllVVgaxBzJp9RaCgv4DqamIr0U2R_H2izfRdmF8-ZkmDQY54NO5Vfc7Mh-HwACBdU0EZvoUsFRfCokdLy_y1Ax&_nc_ht=scontent-dfw5-2.xx&oh=f528f96681b6392f6594b0a5fdc18ffa&oe=5E3B8869" alt="My Face">
+                </div>
+
+                <div class="content">
+                <header>Altoneisha Rose</header>
+                <p>"Student at Operation Spark"</p>
+                <section class="interests">
+                        <header>Interests</header>
+                        <ul>
+                            <li>Chopped</li>
+                            <li>Nature</li>
+                            <li>Coding</li>
+                        </ul>
+                    </section>
+                </div>
+            </main>
+        </div>
+</body>
+</html>
