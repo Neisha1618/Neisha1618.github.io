@@ -76,10 +76,13 @@ function remove(animals,name){
 */
 
 function add(animals,animal){
+    // im looping through the animals array to check if we have a unique name
  for(var i = 0; i < animals.length; i++){
+     // the conitions that i am checking 
  if(animal.name.length > 0 && animal.species.length > 0 && animals[i].name !== animal.name){
+     // if all the conditions are true then push the animal object into the animals array
             return animals.push(animal);
-        } 
+        } // else return animals[i]
         return animals[i];
        
  }

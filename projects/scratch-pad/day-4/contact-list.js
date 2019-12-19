@@ -97,7 +97,7 @@ function makeContactList() {
            
           for(var i = 0; i < contacts.length; i++){
                // we need to push the contacts first name and last name into the array
-              hey.push((contacts[i].nameFirst +" " + contacts[i].nameLast))
+              hey.push(contacts[i].nameFirst +" " + contacts[i].nameLast)
              // we need to seperate the names by a newLine  character so i will use join my array with the newline character
              // this will give us just the string of names joined by the new line character
                 
