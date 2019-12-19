@@ -64,9 +64,12 @@ function makeContactList() {
         length: function() {
             return contacts.length
         },
+        // add contact takes a param of contact and add it to the contacts array
         addContact: function (contact){
              contacts.push(contact)
         },
+        // need to loop over our contacts array an and check if the key of nameFirst and nameLast equals fullname
+        // if it does need to return that contact object
         findContact: function(fullName){
             for(var i = 0; i < contacts.length; i++){
                 if(contacts[i].nameFirst + " " + contacts[i].nameLast === fullName){
@@ -75,8 +78,13 @@ function makeContactList() {
             } 
             return undefined;
         },
+        // for remove contact is the name in contact matches the name in the contacts array we want to remove that contact
+        
         removeContact: function(contact){
+            // we need to first loop over the contacts array
             for(var i = 0; i < contacts.length; i++){
+        // next we want to check if the name in the contacts array matches the name in the contact param
+        // if true we want to splice off that name 
                 if(contacts[i] === contact){
                     contacts.splice(i,1)
                 }
@@ -85,9 +93,13 @@ function makeContactList() {
         printAllContactNames: function(){
             var hey = [];
             // return a string with all the full names sepertated by a new line
+            // first we need to create an array litera and then iterate over the array 
+           
           for(var i = 0; i < contacts.length; i++){
+               // we need to push the contacts first name and last name into the array
               hey.push((contacts[i].nameFirst +" " + contacts[i].nameLast))
-               
+             // we need to seperate the names by a newLine  character so i will use join my array with the newline character
+             // this will give us just the string of names joined by the new line character
                 
         } return hey.join("\n")
         
