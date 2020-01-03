@@ -1,150 +1,203 @@
 /**
- * Data Types
- * 0. Data types are a type of value our data can consist of. we have two types of data: the first type is simple/primitive and it 
- * consists of: Numbers, String, Booleans, Undefined, NaN, and Null. The Second type we call Complex. Complex Data Types consists of: Arrays, Objects and Functions.
- */
- 
- /* 1. Numbers
-  * The numbers data type is any numerical value such as: Integers and decimals. With numbers we can
-  * create arithmetic expressions by: addition, subtraction, divison, and multiplication. 
- */
-
-   // Example//
- let number = 200; 
- console.log(number); // prints => 200
-
- 
-/* 2.  String
- * This data type is a collection of characters and symbols surrounded 
- * by single quotes('') or double quotes(""). Strings can be added together using the (+) operator,
- * this is called concatenations. 
- */
- 
-  // Example//
-  
-  var fruit = 'Apple'; // string value of 'Apple'
-  var drink = 'Juice'; // string value of 'Juice'
-  console.log(fruit + ' ' + drink); // prints => 'Apple Juice'
- 
- /* 3. Boolean 
-  * The Boolean data type has two outcomes, either it is true or false.
-  * Booleans are used in conditional statement and can be turned into boolean expressions by using comparison operators.
- */
-
-  // Example//
-  
-  var greaterThan = (6 > 4);
-  console.log(greaterThan); // prints => true
- 
- 
- /* 4. An Array is a complex data type that is used to store other data types using bracket notation. 
- * Arrays can store every other data type together contained in brackets and seperated by commas. Each value in array contain has
- * an index and to access the index you should type the name of the arr and then in brackets put the index of the element.
- */
- 
-   // Example//
-   
-   let array = ['house', true, 12, ['arr']]; // an array composed of a string, boolean, number, and a array
-   console.log(array[1]); // prints => 'house'
- 
- 
- /* 5. Object
-  * Objects are of the complex data type used to store data that is contained with curly braces {}. Objects can store the other data types 
-  * just like arrays, just in a different way. Objects values are stored with keys
-  * There are two ways to access an object and its values, by either using bracket notation or dot notation
- */ 
-
-  // Example //
-
-var cars = {Honda: 'Accord', Ford: 'F-150' }; // an object literal with a key of Honda and Ford with a value of 'Accord' and 'F-150'
-console.log(cars.Ford); // => Using dot notation....prints => 'F-150'
-console.log(cars['Honda']); // using bracket notation...... Print =>'Accord'
-
- /* 6. Function 
- * Function are of the complex data type and one of the main componets of javascript.
- * A Function declaration consist of the function keyword followed with the name of the function. Next will be parenthesis with parameters in them
- * and a followed by a block of code to run wrapped in curly braces. and inside the curly braces a return statement.
- * The last thing needed is the invocation of the function outside of the function body. Done by writting the name of the function and with arguments in parenthesis. 
+* datatypes
+* 
+* 0. Javascript have nine different datatypes that can be the values of our variables. each datatype is unique in the way they are used.
+*    the datatypes are grouped together by how large  of a space the datatypes take up in memory.
+* 
+* 1. the nine datatypes in javascript are: numbers, strings, booleans, arrays, 
+*    objects, functions, undefined, null, NaN, and (-+) infinity. 
+* 
+* 1. Datatypes are grouped into simple/primitive and complex
+* 
+* 2. Copy by value vs copy by reference
+* 
 */
 
-// Example//
+// 1. Numbers // 
+ var favNumber = 12.1
+ /*
+ * The number datatype is a numerical value that can be either a 
+ * integer or a decimal. the number values are ideal for use in mathamatical equations 
+ * or expressions
+ */
+ 
+ console.log(favNumber); // prints => 12.1
+ 
+ // 2. Strings //
+ let friend = 'jeneice';
+ 
+ /*
+ * Strings are values we put into either single or double quotations. these 
+ * are usually words. we can turn a number datattype to a string by putting it n quotations
+ */
+ 
+console.log(friend); // prints 'jeneice'
 
- function add(num1,num2){
-    return num1 + num2; // code block
+// 3. booleans //
+let haveToWorkTomorrow = true;
+let rested = false;
+
+/*
+* Boolean values are either true or false. these value are usually used with logical operators
+* in conditional statements.
+*/
+
+console.log(haveToWorkTomorrow); // prints => true
+console.log(rested); // prints => false
+
+// 4. arrays // 
+let stuff = ['bag', 1, true];
+
+/*
+* This datatype is a storage datatype meaning it can contain an infinite number of values.
+* arrays uses beackets to hold in all the data seperated by commas. each value contained in 
+* the array has its own space in the array callled its index. the first index is 0 and the last index is array.length -1
+* the length of the array is array.length wich is one more the the index.
+*/
+console.log(stuff);// prints => ['bag', 1, true]
+console.log(stuff[1]) // prints => 1
+
+// 5. objects // 
+let groceryList = {
+ fruit: 'peach', 
+ veggies: 'pumpkin',
+ dairy: 'cheese'
+};
+
+/*
+* an object is another storage datatype similar to arrays but objects dont have a 
+* length property and they do not have indexes. instead objects have key/ value pairs
+*/
+console.log(groceryList); // prints {fruits: 'peach', veggies: 'pumpkin', dairy: 'cheese'}
+
+let healthy = groceryList.fruit;
+let unHealthy = groceryList['dairy'];
+
+/*
+* To access the values in an object we can either use dot notation or bracket notation.
+* if we know the name of the key then dot notation is ideal, if we do not know the name 
+* then we use bracket notation with quotes. also we use bracket notation when the key name is multiple words
+*/
+
+console.log(healthy); // prints => peach
+console.log(unHealthy); // prints => cheese
+
+// 6. functions // 
+function addNum(num1,num2){
+ return num1 + num2;
 }
-console.log(add(100,100)); // prints => 200 
 
-/* 7. Undefined
- * undefined is a variable that has been declared but not initialized yet. when we declare a new variable using the
- * var or let keyword without giving it a value it becomes an undefined value.
- */ 
 
-// Example//
+/*
+* A function is a block a code that performs an act. function declarations start off 
+* with the function keyword followed by a name and parenthesis holding the parameters
+* followed by curly braces that contains the return statemnt and code to be ran when we invoke the function
+* the last thing will be invoking the function outside the function.
+*/
 
-  var num1; // declaring a variable with var
-  console.log(num1); // prints => undefined 
- 
- /* 8. Null 
- * Null is a data type that has the value of nothing but null
- */
+console.log(addNum(2,1)); // prints => 3
 
-// Example//
-var color = 'red';
-color = null; // reassigment of the variable color
-console.log(color);  // prints null
- 
- /* 9. NaN
-  * Stands for "Not a Number", this happens when the result of an arithmetic operation is mathematically undefined such as 
-  * zero/zero. Also when you are trying to to arithmetic operations with something that
-  * is not a number like multiply house*2
- */ 
+// 7. undefined // 
+let greeting;
 
-  // Example// 
-  var divide = 5 / 'Apple'; // a variable intitialized to a number divided by a string
-  console.log(divide); // prints NaN
+/*
+* undefined is a datatype that is declared but not initialized.
+*/
 
- /* 10. Infinity and -Infinity 
-  *Infinity is displayed when the absolute maximun and minimum for javascript is reached. 
- */
+console.log(greeting); // prints => undefined
 
-    // Example//
+// 8. null // 
+let toppings = null;
+/*
+* null has a value of null
+*/
+console.log(toppings); // prints => null
 
-var infinityStone = 1 * Infinity;
-console.log(infinityStone); // prints => Infinity
- 
- /* 11. Simple vs Complex Data 
- * Simple data types are: Numbers, String, Booleans, NaN, Undefined, and Null. Simple/Primitive data types are 
- * Immutable meaning it can not be changed once created.
- * Complex are: Arrays, Objects, and Functions. Complex data types are mutable meaning the values be changed after it is created.
- */
+// 8. NaN // 
 
-    // Example of Simple //
+let subtract = 1000 - "house";
+/*
+* we get NaN, which stands for not a number, when we try to to arithmetic with 
+* non numerical values.
+*/
+console.log(subtract); // prints => NaN
 
-var firstName = 'Altoneisha';
-firstName + 'jayla'; // trying to change 
-console.log(firstName); // immutable..... prints => 'Altoneisha'
+// 9. -Infinity and + Infinity
+const bigNumber = 1 * Infinity;
+const tinyNumber = 1 * -Infinity;
+const notANumber = Infinity/Infinity;
 
-     // Example of Complex //
+/*
+* negative infinity and positive infinity are the abslute 
+* minimum and absolute maximum numbers in javascript. When you use infinity in a mathematical
+* operation the value will always be  except if you try to divide infinity/infinity.
+*/
+console.log(bigNumber); // prints => Infinity
+console.log(tinyNumber); // prints => Infinity
+console.log(notANumber); // prints => NaN
 
-var algae = ['blue', 'green'];
-algae.unshift('red'); // prints => ['red','blue', 'green']
+// 9. simple/primitive vs complex datatypes
+let simple = 10;
 
- /* 12. Copy by value vs Copy by Reference
- * Simple data values are copied by value meaning a variable can take the value of another variable but the original variable value is not affected because it was a copy. 
- * Complex values are copied by reference meaning depending on the change to either value both could be affected because the value is referenced.
- */
+/*
+* Simple data types consist of: numbers, strings, boolean, undefined, null and NaN. 
+* simple data are smaller in size than complex datatypes
+* simple datatypes are immutable meaning the value cannot be changed.
+*/
+console.log(simple); // prints => 10;
 
-     // Example of copy by value//
- var oddNumber = 7; // initializing variable 1
- var evenNumber = oddNumber + 1; // setting variable 2 equal to variable 1 + 1
- console.log(evenNumber); // prints => 8 
- evenNumber = 20; // changing the value of variable 2
- console.log(oddNumber); // variable 1 is not changed....prints => 7
-    
-    // Example of copy by reference//
-var state = {louisiana: 'LSU'};
-var school = state;
-console.log(school) // prints {louisiana: 'LSU'}
-school.louisiana = 'tulane';
-console.log(school) // prints out {louisiana:'tulane'}
-console.log(state);// print out {louisiana:'tulane'} 
+let complex = {one: 1};
+
+
+/*
+* complex datatypes consist of: arrays, objects and functions.
+* complex data is larger than simple data
+* complex data types are mutable
+*/
+
+console.log(complex) // prints => {one: 1}
+
+// 10. copy by value vs copy by reference // 
+let car = 'mustang';
+let color = 'green' + " " + car;
+
+/*
+* simple data types are copied by value meaning the original variable 
+* is not changed or affected if another variable use the value of the original variable
+*/
+console.log(color); // prints => green mustang
+console.log(car); // prints => mustang
+
+let pets = {
+ fun: 'dog',
+ notFun: 'cat'
+};
+
+let favPet = delete pets.notFun;
+
+/*
+*  complex data is copied by reference meaning the original variable value can 
+*  be manipulated by the second variable. because they would be linked together by 
+*  the variable not just the value like simple datatype
+*/
+
+console.log(favPet); // prints => {fun: 'dog'}
+console.log(pets); // prints => {fun: 'dog'}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

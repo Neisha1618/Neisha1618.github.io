@@ -1,94 +1,83 @@
-/* Loops
- * 0. Loops are a way we can iterate through a set of data for as many of time as we want. and to perform a particular action on each element.
- * There are different types of loops one is the While-Loop another is a For-Loop which is good for looping over arrays. 
- * and the final one is the For-In loop that loops through an object. The main Componets of loops include: the loop keyword, starting condition, 
- * stopping condition, Iterator and code block. 
- */
+/**
+ * Loops
+ * 
+ * 0. Loops are helpful because they perfom an act on data as many times we want it to. 
+ *    There are multiple loops that work differently on different type of data.
+ * 
 
-/*  While-Loop Syntax
- * The while has the  initial condition outside of the loop. Under the Initial condition next is the key word "while" followed by parenthsis 
- * containing the stopping condition. Next is the code block with the iterator inside.
- */
+ /* 1. While Loop
+ *    A while loop starts off with a initial condition/ starting condtion that is outside
+ *    the loop. next there is the while keyword followed by the stoping condition in parenthesis 
+ *    followed by the code block to run with the iterator inside it.
+*/
 
- // Example of While Loop Syntax//
+    // synthax //
+
+let start = 0; // when to start looping
+
+      while(start < 4){ // when to stop looping
+      console.log(start); // prints => 0,1,2,3
+      start++; 
+}
+
+
+/*  2. For-Loop
+ *    This loop is great for looping over an array.
+ *    In starts with the for keyword followed by parenthesis containing: 
+ *    starting condition, stopping condition, and incrementor followed by the code block that will be ran.
+*/
+
+   // synthax looping forward//
+   
+   for(let i = 1; i < 5; i++){ // starting condition is lower than stopping condition, we use an incrementor as iterator
+       console.log(i); // prints => 1,2,3,4
+   }
+   
+   // synthax for looping in reverse//
+   
+   for(let i = 5; i > -1; i--){ // starting condition is highere than stoping condition, we also use a decrementor as iterator
+       console.log(i); // prints 5,4,3,2,1,0
+   }
+
+
+
+
+/* 3. For-in Loop
+ *   used to loop over an object.
+ *   unlike the other loops, this loop does not have conditions and just lops over the whole object.
+ *   It starts with the for keyword followed by parenthesis that contains the keyword var key in object.
+ *   Where object is whatever the name of the object is.
+*/
+
+// Example of looping over an object//
+
+var obj = {
+    car: "chevy",
+    color: 'grey',
+    year: 2015
+};
+
+for(var key in obj){
+    console.log(key); // prints => car,color,year
+}
+
+// Example of looping over an array
+
+ let months = ['jan', 'feb', 'mar', 'april'];
  
- var count = 1; // initial condition
- while(count < 10) // stopping condition
- {   
-    
-     count++; //incrementor 
+ // forward  
+ 
+ for(let i = 0; i < months.length; i++){
+     console.log(months[i]); // prints jan, feb, march, april
+     
  }
-  console.log(count); // prints 1, 2, 3, 4, 5, 6, 7, 8, 9
  
- /* For-Loop Syntax
-  * The for loop starts with the for keyword followed by parenthesis contaning the initial condition, stopping condition, and then the iterator
-  * then closing the parenthesis. next the code block. the difference between the this loop is that all of the conditions are together on the same line
-  */
+ // backwards
  
-  // Example of For-Loop//
-     
-     for(var i = 0; i < 5; i++)  {
-        console.log(i); // code block prints 0, 1, 2, 3, 4
-     }
-     
- /* For In Loop Syntax
-  * Starts with the For-In keyword, then the open parenthesis with the (var key in object) followed by closed parenthesis.
-  * next is the code block. For in loops have no iterator because it iterates over the whole object.
-  * 
-  */
-  
-     // Example //
-  var obj = {}
-  for(var key in obj){
-      
-  }
-   
-   
-   
- /* Looping forward vs Looping backwards
-    * the intial condition comes before the stopping condition. with looping forward we use the (++) as the iterator 
-    * To loop in reverse the stopping condition comes before the intial condition. and the iteratore is (--)
-  */
+ for(let i = months.length; i > -1; i--){
+     console.log(months[i]); // prints april, mar, feb, jan
+ }
  
-    // Example of looping forward //
-    
-    for(var i = 1; i <= 6; i++){
-        console.log(i) // prints 1, 2, 3, 4, 5
-    }
-    
-    // Example of looping in reverse
-    
-    for(var i = 3; i >= 0; i--){
-        console.log(i); // prints 3, 2, 1, 0
-    }
-    
-    /* Looping over an Array 
-     * When looping over an array the array.length property lets you go to the last index in the array 
-     */
-    
-       // Example looping forward//
-      var numArray = [1, 2, 3, 4, 5];
-      for(let i = 0; i < numArray.length; i++){
-          console.log(numArray[i]); // prints 1,2,3,4,5
-      }
-      
-      // Example looping backward//
-      for(let i = numArray.length;  i >= 0; i--){
-          console.log(numArray[i]); // prints 5,4,3,2,1
-      }
-     
-     /* Looping over an Object
-      * when Looping over an obeject we use the for-in loop. With a for in loop there is no iterator so we loop over the whole object
-      */
-     
-         // Example//
-     
-   var myObject = {one: 1, two: 2};
-     for(var key in myObject){
-    console.log(myObject[key]); // prints => 1, 2
-    console.log(key) // prints => one, two
-   }    
-   
-    
-     
+ 
+
 

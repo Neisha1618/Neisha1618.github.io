@@ -2,23 +2,47 @@
 // min /////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-function min() {
-
+function min(num1,num2) {
+// this function takes two arguments and return their minimum
+// create an if statement that returns the lowest number
+if(num1 < num2){
+  return num1;
+} else{
+  return num2;
+}
 }
 
 ////////////////////////////////////////////////////////////////////////////////
 // isEven //////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-function isEven() {
-
+function isEven(num) {
+  // write a function that test whether a number is even
+console.log(num);
+if(num % 2 === 0){
+  return true;
+} else{
+  return false;
+}
 }
 
 ////////////////////////////////////////////////////////////////////////////////
 // countChars //////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-function countChars() {
+function countChars(string,char) {
+  // takes a string and char
+  // create a container to hold the count
+  let count = 0;
+  //we need to loop through the string 
+  for(var i = 0; i < string.length; i++){
+    // if the string contains the char count += 1
+    if(string[i].includes(char)){
+      count += 1;
+    }
+  } return count;
+  
+  
 
 }
 
@@ -26,7 +50,18 @@ function countChars() {
 // countBs /////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-function countBs() {
+function countBs(string) {
+ // we need to return a number that indicate how many 'B' are in the string
+  console.log(string);
+  // we need a varable to hold the count
+  let count = 0;
+// we need to first loop through the string
+for(let i = 0; i < string.length; i++){
+  // everytime we hit a B count +=1
+  if(string[i].includes('B')){
+     count+= 1;
+  }
+} return count;
 
 }
 

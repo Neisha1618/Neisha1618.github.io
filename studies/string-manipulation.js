@@ -1,52 +1,55 @@
-/* String Manipulations
- * 0. There are multiple ways a string can be manipulated one way is by using Operators such as the (+) to add the string 
- * which is called concatenation. When concatenating string you have to also concatenate the space.
- */
-
-    // Example
-    
- var add = 'a' + 'b' + 'c' + 'd';
- console.log(add); // print 'abcd'
- 
- /* Methods
-  * New strings can be created from another string by utilizing the built in javascript methods.
-
-        Method                     Function
-  * .toLowerCase()              Lowercase elements in a strng that are uppercase
-  * .join()                     join strings together
-  * .toUpperCase()              uppercase element in a sting that are lowercase
-  * .concat()                   concatenate multiply strings together
-  * .slice()                    slice off a portion of a string 
+/**
+ * String-Manipulation
+ * 
+ * 0. The string data type can be manipulated using different built in methods and operators
 */
 
-   // Example of toLowerCase() ///
-   
-  var building = 'benson tower' ;
-   console.log(building.toLowerCase()); // prints => 'benson tower';
-   
-   // Example of join() //
-   
-  var fruit = ['apple', 'orange'];
-   fruit.join(",");
-  console.log(fruit);  // prints => 'apple,orange'
+/* 1. Operators
+ *   We can use the addition operator(+) to add multiple strings together to 
+ *   make one long string. This idea is called string concatenation.
+ *   We can also use the += operator to add a string to another string.
+*/
+
+// Example //
+
+var fruits = 'Apple';
+var drink = 'Juice';
+var fruitDrink = fruits + " " + drink;
+console.log(fruitDrink); // prints Apple Juice
+
+/* 2. String Methods
+ *    String methods are built in javascript methods that make our lives easier when it comes to manipulating strings
+ *    Some built in string methods include: toUpperCase()  // makes everything uppercase
+ *                                          toLowerCase() // makes everything lowercase
+ *                                          join()   // joins a sting
+ *                                          split()  // splits the string into an array of strings
+ *                                          slice()  // slice off parts of a string
+ *                                          replace()  // replaces a value in the string
+*/
+
+// Examples//
+var city = "new orleans";
+var state = "LOUISIANA";
+city.toUpperCase(); // prints => NEW ORLEANS
+state.toLowerCase(); // prints => louisiana
+
+//Example //
+var str = "dallas";
+let major = str.split("") ;
+console.log(major); // prints => ['d','a','l','l','a','s'];
+
+let majorCity = major.join("-");
+console.log(majorCity); // prints => d-a-l-l-a-s
+
+// Example //
+
+let hey = 'yah'; 
+ let sliceIt = hey.slice(1);
+ console.log(sliceIt); // prints => ah
  
-  // Example toUpperCase()
- 
-  var lastName = 'nedd';
-  lastName.toUpperCase(); // prints => 'NEDD'
-  
-  // Example concat() //
-  
-  let num = 'two';
- console.log(num.concat( " ",'three')); // prints => 'two' "three"
- 
- // Example slice() //
- 
- let sliceOff = "abcde";
- sliceOff.slice(0,2); // prints => "ab"
- 
-   
-   
-   
- 
-      
+ let replaceIt = hey.replace('y','r');
+ console.log(replaceIt);// prints => rah
+
+
+
+

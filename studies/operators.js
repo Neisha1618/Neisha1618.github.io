@@ -1,102 +1,116 @@
-/** Operators
- * 0. Operators are used to take action on a set of data called the operand. There a different typ of operators whit different uses.
- * These different Operators are: Assignment, Arithmetic, Comparison, Logical, Unary, and Ternary.
- */
-
+/**
+ * Operators
+ * 
+ *  0. Operators perform an action on an operand or multiple operands
+ * 
 /* 1. Assignment Operators
- *  The Assignment Operators assign something to a value using the arithmetic operators and the equal operator
- */
+  *   The assignment operator assigns a value using the equal(=) operator and 
+  *   can also use mathematical operators with the (=) operator
+*/
 
-   //Example//
-   
-   var num = 5;
-   console.log(num); // prints 5
-   num *= 3;    // using the multiplication and equal assignment operator to multiple 5 by 3
-   console.log(num); // prints 15
-   
-  /* 2. Arithematic Operators
-   * These Operators are used to perform math operations between variables and values. These operations can range
-   * from simple to complex. 
-     Aritmatic Operators             Operation Performed
-   *       +                            Addition
-   *       -                            Subtraction
-   *       *                            Multiplication
-   *       /                            Division
-   *       %                            Remainder
-   *       ++                           Incrementor
-   *       --                           Decrementor
-   */    
+// Example //
+
+var num = 10; // assigning num to 10
+num += 2; // re- assigning num to 12
+console.log(num); // prints => 12
+
+/* 2. Arithemetic Operator
+ *    Arithmetic operators perform mathematical operations on a value
+ *    These operators are: Addition (+)
+ *                         Subtraction(-)
+ *                         Multiplication(*)
+ *                         Division(/)
+ *                         Incrementor(++)
+ *                         Decrementor(--)
+*/
+
+// Example //
+
+var add = 5 + 5; 
+console.log(add); // prints 10
+
+var big = 100;
+var lil = 10;
+var divide = big/lil;
+console.log(divide); // prints => 10
+
+/* 3. Comparison Operator
+ *   The comparison operators are used to compare two or multiple values to one
+ *   another. With comparison operators they're best used in logical statements such as conditional statements.
+ *   These Operators include: equal to (==)            * just checks whether the value match
+ *                            strictly equal to (===)  * strictly checks that the value and the type match
+ *                            greater than (>)
+ *                            greater than or equal (>=)
+ *                            less than (<)
+ *                            less than or equal to (<=)
+ *                            not equal (!=)
+ *                            strictly not equal (!==)
+*/
+
+// Example //
+
+if(5 === '5'){
+    console.log(true); // this block will not run because the number 5 does not strictly equal the string of "5"
+} else if(5 == '5'){
+    console.log(true); // this block will run because only the value matters when its not strictly compared
+} else {
+    console.log(false);
+}
+
+/* 4. Logical Operators
+ *   Logical Operators check the logic betwee values are correct.
+ *   These operators include: And (&&)
+ *                            Or (||)
+ *                            Not equal (!) * this operator changes the truthiness
+*/
+
+     // Example //
      
- // Example //
-      
-       var multiplyNum = 6 * 3; 
-       console.log(multiplyNum); // prints 18
-       
-       let incrementNum = 5;
-       incrementNum++;
-       console.log(incrementNum); // prints 6
-       
-   
-   
-    /* 3. Comparison Operators
-     * Comparison operators are used in logical statements to compare two values to each other 
-     * and they evaluate to be true or false
-     
-     *       Operator                         Function
-     *   (==) (===)                 equal to and strictly equal too
-     *    !=  (!==)                 not equal too and Strictly not equal too
-     *       >                             Greater than
-     *       <                              Less Than
-     *       >=                         Greater than or Equal too
-     *       <=                         Less than or equal too
-    */
-   
-    // Examples //
-    
-    console.log(5 <= 10); // prints true
-    console.log(5 === '5'); // prints false
-    console.log(2 == '2'); // prints true
-    
-    /* 4. Logical Operators
-     *  Logical operators are used to determine the logic between two values in a condition.
-     
-     *      Operator                   Function    
-     *        &&              And Operator: Both of the conditions need to be true
-     *        ||              Or Operator: One of the values need to be true          
-     *         !              Bang Operator: Flps the truthiness of the values
-     */
-    
-        // Example //
-    
-    var bangOperator = !4;
-    console.log(bangOperator); // prints false because the bang operator changes the truthiness
-    
+if(5 > 6 && 6 > 5){        // this code will not run because the && operator means both comparisons must be true and 6 is not > 5
+    console.log('you tried it');
+} else if(5 > 6 || 6 > 5){  // this code will run because the || operator means only one has to be true
+    console.log('thats true');
+} else {
+    console.log('this code will not run');
+}
+
 /* 5. Unary Operator
- * A unary operator is one that take a single operand and performs an operation. 
- * Not all operators are symbols. Some are written in words in the case of they typeof operator
+ *    This operator only has one operand that it acts on 
+ *    These Operators include: typeof(operand)  * which returns the type of the operand
+ *                             delete(operand)  * used in objects, this operator deletes the operand 
+*/
 
-      Operator                    Function                 
- *    typeof                Tell you what type of data an operand is
- *      +                     Converts an operand to a number
- *      -                     Converts an operand to a number then negates it
- *      !                     Flips the truthiness
+ // Example //
+ 
+ console.log(typeof('5')); // returns string
+ console.log(typeof(true)); // returns booleans
+ 
+ let obj = {
+     one: 1,
+     two: 2
+ };
+ 
+ delete(obj.one); // deletes the key of one
+ console.log(obj) // prints => {two: 2}
+ 
+ /** 6. Terinary Operator
+  * This operator is considered a conditional operator and this has three operands.
+  * it starts off with a condition to check, followed by question mark followed with the first value then a colon then the next value.
+  * if the condition is true then the first value will be true, else the second value is true
  */
-    
-   
-   
-    // Example //
-    
-    console.log(typeof true); // prints boolean
-    
-    
-/* Ternary Operators
- * Ternary operators operate on three values. this operator is written with a question mark and colon seperating the values
- * The value on the left side of the question mark has the boolean. When the value is true the middle value is picked. When 
- * the value is false the right value is chosen
- */
-    
-    // Examples
-    
-    console.log(true ? 6 : 8); // prints 6 
-    
-    
+ 
+ // Example // 
+ 
+ var weather = 'rainy';
+ weather === 'sunny' ? 'fluffy hat': 'umbrella'; // prints umbrella 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+ 

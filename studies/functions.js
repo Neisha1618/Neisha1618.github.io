@@ -1,101 +1,109 @@
-
-/** 0. Functions are what makes javascript a functional programming language. function can go from simple to extremely complex.
-
-
-/* 1. Two phases to a function
- * Phase one is function declaration where we name the function and create the function body. that includes the 
- * Parameter and code block with the return statement
- * Phase two is when we call the function to run it by putting the function name and passing in arguments inside parenthesis
+/**
+ * Functions
+ * 
+ * 0. A function is a block a code that performs an act. this act can be performed on 
+ *    multiple arguments with less code which is what makes function so useful.
+ */ 
  
-*/
-
-    // Example of phase 1 Function Declaration //
-    function read(book1, book2){
-        return book1 + book2;
-    }
-
-    // Example of phase 2 invocation//
-    read('be','loved'); // passing in two arguments to call the function
-    console.log(read('be','loved')); // print => 'beloved' 
-
-
-/* 2. Parameters vs Arguments
- * Parameters whole a space in memory for our future arguments that will be passed through the function.
- * the amount of arguments should equal the amount of parameters 
- */
-
-  // Example //
-    function subtract(par1,par2) // two paramaters
-    {
-        return par1 - par2;  
-    }
-    subtract(10,2); // passing through the arguments of 10 and 2
-    console.log(subtract(10,2)); // prints => 8
-    
-// 3. Syntax for a Named function
-
- function divide(parameter1, parameter2){
-         return parameter1/parameter2;
-     }
- console.log(divide(10,5)); // prints 2
- 
- /* 4. Function Expression
-  * To assign a function to a variable we use the assignment operator (=).
-  * with function expresions the variable is hoised and not the value which is the function body if declared with var. 
-  */
-  
-  // Example//
-  
-  var add = function (par1,par2){
-      return par1 + par2;
-  }
-  console.log(add(6,4)) // prints => 10
-
-/* 5. Input vs Outputs
- * Input are the parameters given to the function. 
- * or not, so if we do not have parameters. we do not have inputs. 
- * Outputs would be what we want the function to return. our return is like a "do this". 
+ /* 1. Two phases to a function
+ *    There are two phaes to using a function, first we must declare the 
+ *    function then we must invoke the function
  */
  
-        // Example of a function with no inputs and output //
-        function display (){ // we have no parameters
-            return 'Hello World'; // our output is 'Hello World'
-        }
-        display(); // we have no inputs and no output
-        
-        
-/* 6. Scope
- * Scope is the space in javascript where a variable can be accessed. There are three types of scopes: local, global, and block.
- * The local scope is within a function body and can not be accessed outside in the global scope. 
- * Block scope is the scope within the curly braces of either loops or conditional statements
- * in the global scope. 
- * the global scope is the overal scope outside of functions and loops. the global scope only ahs accessto global variables but the
- * variable in the global scope can be accessed in the local scope and block scope.
+   // Example//
+   
+   function times(par1,par2){
+       return par1 * par2;
+   }
+   times(1,2); // function invocation => returns a value of 2
+ 
+ /* 2. Parameters vs Arguments
+ *    A functions parameter are placeholders for future arguments that will be passed 
+ *    through the function. at call time the arguments will be the values ran through the functon.
  */
-
-    // Example //
-    var city = 'new orleans'; // global variable
-    //console.log(weather); // prints => reference error  weather is not defined
-    
-    function temperature(){
-        let  weather = "rainy";
-        console.log(city); // prints 'new orleans'
-    }
-    temperature();
-    
-/* 7. Closures
- * Closure is a function that we utilize to give us access to a local variable long after the function is ran.
+ 
+   // Example //
+   
+   function func (parameter1,parameter2){
+       return parameter1 + parameter2;
+   }
+   // func(arg1,arg2)// arguments to be passed in
+ 
+ 
+ /* 3. Syntax for a named function
+ *    Named functions have a specific synthax that include: the function keyword, parameters, 
+ *    code block, and the return statement. and of course the invocation outside of the function body.
  */
-
-         // Example // 
-
-function sportTeams(city){
-    let fav = 'saints';
-   return function basketBallTeam(){
-        console.log(fav);
-    }; 
-} 
-
-    
-
-
+ 
+ // Example//
+ function greeting(par1,par2){ 
+  return "hey" +" "+ par1 + "how is " + " " + par2 + "?";
+ }
+ console.log(greeting("jazmin", "max")); // prints => hey jazmin how is max?
+ 
+ 
+ 
+ /* 4. Assigning a function to a variable
+ *    To create a function expression, which is assigning a function to a variable, we start of with the 
+ *    keywords either var, let or const and then a name for our function. then we use the assignment opertator followed 
+ *    by the function keyword and the function body.
+ */
+ 
+ // Example //
+ 
+ let division = function(num1,num2){
+  return num1/num2;
+ };
+ console.log(division(10,5)); // prints => 2
+ 
+ /* 5. Specify inputs and Output
+ *    Function's inputs are the arguments and the functions output is what the function will
+ *    return when the arguments are passed through.
+ */
+ 
+ // Example function with an input//
+ function input(input){ // this is the input of a function
+  console.log("this is a function with an input without an output"); 
+ }
+ input();
+ 
+ // example of a function with an output and input
+ 
+ function both(input){ 
+  return input; // this is the output of the functon
+ }
+ console.log(both(200)); // prints => 200
+ 
+ 
+ 
+ /* 6. Function Scope 
+ *    The functions have their own scope called the local scope. Functions can access variables
+ *    outside of their scope in the global scope, but the global scope cant access anything inside of the local scope.
+ */
+ 
+ // Example //
+ 
+ var number = 4;
+ //var addition = number + negative //  prints an error message because the var negative can not be accesed from the global scope
+ 
+ function add(){
+  var negative = -2;
+  return number + negative; // the variable number can be accessed in the local scope
+ }
+console.log(add()); // prints => 2
+ 
+ /* 7. Closures 
+ *    closures are a way to keep a variable active once a function is ran. the closure function 
+ *    uses the variable either as a parameter or inside the function.
+ */
+ 
+ // Example // 
+ 
+ function cars(){
+  let fav = 'jeep';
+  return function price(){ 
+   return console.log(fav);
+  };
+ }
+ 
+ 

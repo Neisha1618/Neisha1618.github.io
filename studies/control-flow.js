@@ -1,60 +1,75 @@
-/**  Control Flow
- * 0. Javascript is single threaded meaning it reads code from top to bottom. conditional statement are a perfect example of this
- * to organize the control flow of a condtional statement we have the: If, Else-If, Else, and Switch statements.
- */
+/**
+ * Control Flow
+ * 
+ * 0. Javascript reads code from top to bottom. Because of this we as programmers 
+ *    have to be careful of how we right out our code. Control Flow is a way we can have 
+ *    our code in an organized fashion based on conditions. 
+*/
 
 /* 1. If Statements
- * In a conditional statement, the if statement is the first code that is read. We have the keyword If, after that we have conditions
- * in parenthesis that has to be met for the code to run. Followed by the parenthesis is the curly braces with the code to ran
- * if the condition is true.
- */
+ *    The If statement is the first element in a conditional statement, If this 
+ *    statement evaluates to true the code block for this statement will run. If this 
+ *    statement evaluates to false, the code will not run. 
+ *    It startes with the keyword if followed by parenthesis with the condition to be checked
+ *    followed by the code block to run if the condition is true.
+ *    We should only have one if Statement
+*/
 
-/* 2. Else-If
- * If the conditions in the 'If statement' evaluates to false, The Else-If statement would be the next statement evaluated.
- * the keyword Else-If followed by the condition to be evaluated in parenthesis followed by the curly braces with the code block.
- * If the condition evaluates to true the code will run. If the conditions evaluate to false it goes down to the default.
- */
+/* 2. Else-If Statement
+ *    If the If Statement evaluates to false this is the next conditions that will be checked.
+ *    this statement starts with the else if keyword followed by the parenthesis containing the condition to check
+ *    followed by the code block to run if this statement evaulates to true.
+ *    Unlike the if Statement, we can have as many else if Statement as we need
+*/
 
-/* 3. Else 
- * The default statement if none of the conditions evaluate to true
- */
-
+/* 3. Else Statement
+ *    If no other condtions evaluate to true, then we have a default statement called the Else Statement.
+ *    this block will then run. It start off with the else keyword followed by the code block to run.
+ *    Like the if statement, there is only on else statement.
+*/
+ 
+ // Examples //
+ var color = 'red'
+ if(color === "blue"){
+     console.log("sky"); // will not run
+ } else if(color === 'yellow'){
+      console.log("bananas") // will not run
+ } else if(color === 'red'){
+     console.log("fiery"); // this code will run and end the statements
+ } else{
+     console.log("not cute"); // since the previous code evaluated to true this code was never reached
+ }
+ 
+ 
+ /* 4. Switch Statement
+  *    The switch statement is another condition statement we have. the switch statment starts
+  *    off with a value that will be checked. Next will be the keyword switch followed by the 
+  *    value/condition we will be checking in parenthesis. next will be the case keyword followed 
+  *    by the value to check followed by a code block that will run if the case is true. followed by the keyword break.
+  *    We can have as many cases to check as we need. 
+  *    finally we have a default statement that will run if none of the cases 
+  *    evaluate to true. It is just the keyword default foloowed by colons followed by a block of code to be ran.
+  */   
+  
   // Example //
   
-  let favColor = 'red';
+  let testScore = 90;
   
-  if (favColor === 'green'){
-      console.log('green'); // this block will ot run
+  switch(testScore){
+      case 60: 
+          console.log('needs a lot of work');
+          break;
+      case 70: 
+          console.log("basic");
+          break;
+      case 80:
+          console.log("you almost was a star");
+          break;
+      case 90:    
+          console.log("above the grain"); // ths block will be ran
+          break;
+      default:
+          console.log("level couldnt be determine");
+          
   }
-  else if (favColor === 'red'){
-      console.log('red'); // this block will run and the code will stop here
-  }
-  else {
-      console.log("none of them"); // this block will not run because the code stopped running at the else if.
-  }
-  
-  /* 4. Switch Statements
-   * A switch statement runs code based off of a condition being true. We  start with a variable. being checked
-   * followed by the switch keyword. next, we have the case keyword
-   * with the condition being checked followed by colons. Then the code block that runs if the condition is true. followed by a break statement 
-   * that stops the code from running if it evaluates to true. and the last step is a default statemnt if no codition evaluated to true.
-  */
-
-     // Example//
-     
-  var pets = 'dog'; 
-  
-  switch(pets){ // the variable being checked
-      case 'tiger':  // will not run
-      console.log('rarrrr');
-  break;   
-  
-       case 'dog':
-       console.log('woof'); // will run and the code will end at the break
-  break;
-  
-       default:  
-       console.log('no dog at all');
-  }
-  
-
+ 
