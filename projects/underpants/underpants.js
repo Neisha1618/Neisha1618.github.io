@@ -303,7 +303,7 @@ _.filter = function(array,func){
 * Examples:
 *   _.reject([1,2,3,4,5], function(e){return e%2 === 0}) -> [1,3,5]
 */
-let rejectArr = [];
+
 _.reject = function(array,func){
     return _.filter(array,function(element,i,array){
         return !func(element,i,array);
@@ -329,13 +329,14 @@ _.reject = function(array,func){
 *   }); -> [[2,4],[1,3,5]]
 }
 */
+
 let storeAll = [];
 let truthy = [];
 let falsy = [];
 
 _.partition = function(array, func){
            _.each(array,function(element,key,array){
-        if(func(element,key,array)=== true){
+        if(func(element,key,array) === true){
            truthy.push(array[key]);
         }else {
          falsy.push(array[key])
@@ -532,7 +533,10 @@ _.extend = function(obj1, ...object2){
  // console.log(...obj)
  // we need to copy properties from ...obj to obj1
  // return the updated obj1
+ 
+ // first we need use a for loo to loop through object two because it is somewhat of an array now thinks to the spread operator
  for(var i = 0; i < object2.length; i++){
+ // use a for in loop to apply everything from    
    for(let key in object2[i]){
      obj1[key] = object2[i][key];
  }
