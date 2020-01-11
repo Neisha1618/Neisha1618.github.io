@@ -58,8 +58,13 @@ var obj = {
 };
 
 for(var key in obj){
+    // to access the keys in the object
     console.log(key); // prints => car,color,year
+    // to access the values in the object
+    console.log(obj[key]); // prints => 'chevy', 'grey', 2015
 }
+
+
 
 // Example of looping over an array
 

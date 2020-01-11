@@ -50,12 +50,14 @@ let stuff = ['bag', 1, true];
 
 /*
 * This datatype is a storage datatype meaning it can contain an infinite number of values.
-* arrays uses beackets to hold in all the data seperated by commas. each value contained in 
+* arrays uses brackets to hold in all the data seperated by commas. each value contained in 
 * the array has its own space in the array callled its index. the first index is 0 and the last index is array.length -1
-* the length of the array is array.length wich is one more the the index.
+* the length of the array is array.length wich is one more then the index. to access the characters we access their index
+* using bracket notation. starting with the name of the array followed by a bracket containing its index in the array.
+
 */
 console.log(stuff);// prints => ['bag', 1, true]
-console.log(stuff[1]) // prints => 1
+console.log(stuff[1]); // prints => 1
 
 // 5. objects // 
 let groceryList = {

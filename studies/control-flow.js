@@ -45,10 +45,12 @@
   *    The switch statement is another condition statement we have. the switch statment starts
   *    off with a value that will be checked. Next will be the keyword switch followed by the 
   *    value/condition we will be checking in parenthesis. next will be the case keyword followed 
-  *    by the value to check followed by a code block that will run if the case is true. followed by the keyword break.
-  *    We can have as many cases to check as we need. 
-  *    finally we have a default statement that will run if none of the cases 
-  *    evaluate to true. It is just the keyword default foloowed by colons followed by a block of code to be ran.
+  *    by the value to check followed by a code block that will run if the case is true. followed by 
+  *    the keyword break. that will stop the code from running if the condition is true We can have as many 
+  *    cases to check as we need. finally we have a default statement that will run if none of the cases 
+  *    evaluate to true. It is just the keyword default followed by colons followed by a block of code to be ran.
+  *    A switch statement is ideal if we have a lot of conditions to check such as 15. it would be tedious to write out all the else if 
+  8    syntax
   */   
   
   // Example //

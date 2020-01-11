@@ -7,7 +7,7 @@
 /* 1. Operators
  *   We can use the addition operator(+) to add multiple strings together to 
  *   make one long string. This idea is called string concatenation.
- *   We can also use the += operator to add a string to another string.
+ *   We can also use the addition assignment operator(+=) to add a string to another string.
 */
 
 // Example //
@@ -17,11 +17,17 @@ var drink = 'Juice';
 var fruitDrink = fruits + " " + drink;
 console.log(fruitDrink); // prints Apple Juice
 
+// Example //
+
+let redFruit= 'apples';
+redFruit += 'strawberry';
+console.log(redFruit); // prints => 'applesstrawberry'
+
 /* 2. String Methods
  *    String methods are built in javascript methods that make our lives easier when it comes to manipulating strings
  *    Some built in string methods include: toUpperCase()  // makes everything uppercase
  *                                          toLowerCase() // makes everything lowercase
- *                                          join()   // joins a sting
+ *                                          charAt() //     returns a character from the specified index
  *                                          split()  // splits the string into an array of strings
  *                                          slice()  // slice off parts of a string
  *                                          replace()  // replaces a value in the string
@@ -38,8 +44,8 @@ var str = "dallas";
 let major = str.split("") ;
 console.log(major); // prints => ['d','a','l','l','a','s'];
 
-let majorCity = major.join("-");
-console.log(majorCity); // prints => d-a-l-l-a-s
+let charString = str.charAt(0);
+console.log(charString); // prints => "allas"
 
 // Example //
 

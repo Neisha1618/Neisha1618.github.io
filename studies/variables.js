@@ -81,14 +81,24 @@ console.log(pet); // prints 'snake'
 console.log(hey()); // prints => 'yah' to the console
 
 function hey(){
-    return 'yah'
+    return 'yah';
 }
 
 /*
-* just like with var we have access to the function declaration before we actually get to line 83
+ just like with var we have access to the function declaration before we actually get to line 83
 */
 
 
+console.log(juice); // prints => reference error saying juice is not defined
+let juice = 'grape';
+
+console.log(country); // prints => reference error saying country is not defined
+const country = 'prague';
+
+
+/*
+ let and const is technically hoisted but we do not have access to those variables 
+*/
 
 
 
