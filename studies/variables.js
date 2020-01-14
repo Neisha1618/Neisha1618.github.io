@@ -97,7 +97,8 @@ const country = 'prague';
 
 
 /*
- let and const is technically hoisted but we do not have access to those variables 
+ let and const are technically hoisted but we do not have access to those variables until we reach the line they are declared on.
+ so we say that let and const are not hoisted.
 */
 
 
